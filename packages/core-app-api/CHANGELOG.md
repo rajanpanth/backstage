@@ -1,5 +1,14 @@
 # @backstage/core-app-api
 
+## 1.20.4
+
+### Patch Changes
+
+- a4759e6: Migrated tests from MSW v1 to MSW v2.
+- Updated dependencies
+  - @backstage/core-plugin-api@1.12.9
+  - @backstage/ui@0.17.1
+
 ## 1.20.4-next.1
 
 ### Patch Changes
