@@ -791,6 +791,11 @@ const routes = (
 
 If you are using [app feature discovery](../architecture/10-app.md#feature-discovery) the installation step is simple, it's already done! The new version of the scaffolder plugin was already discovered and present in the app, it was simply disabled because the plugin created from the legacy route had higher priority. If you do not use feature discovery, you will instead need to manually install the new scaffolder plugin in your app through the `features` option of `createApp`.
 
+Once the migrated plugin is installed through the new system, remove the
+corresponding legacy route from `FlatRoutes`. Keeping the legacy route in place
+will keep the converted legacy plugin active and can prevent the newly installed
+plugin from taking over.
+
 Continue this process for each of your legacy routes until you have migrated all of them. For any plugin with additional extensions installed as children of the `Route`, refer to the plugin READMEs for more detailed instructions. For the entity pages, refer to the [separate section](#catalog-entity-page).
 
 ##### Migrating `<Redirect>` routes
