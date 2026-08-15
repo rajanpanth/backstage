@@ -790,7 +790,7 @@ Response type is JSON, on the form
 
 Adds a location to be ingested by the catalog.
 
-If successful the response code will be `HTTP/1.1 201 Created` and a JSON on the form
+If successful, the response code will be `HTTP/1.1 201 Created` and a JSON on the form
 
 ```json
 {
@@ -822,7 +822,7 @@ If the location already exists the response will be `HTTP/1.1 409 Conflict` and 
 }
 ```
 
-Supports the `?dryRun=true` query parameter, which will perform validation and not write anything to the database. In the event of successfully passing validation, the `entities` field of the response JSON will be populated with entities present in the location.
+Supports the `?dryRun=true` query parameter, which will perform validation and not write anything to the database. If validation succeeds, the `entities` field of the response JSON will be populated with entities present in the location.
 
 ### `POST /analyze-location`
 
@@ -878,7 +878,7 @@ And Response type is JSON, on the form
 
 ### `DELETE /locations/{id}`
 
-Delete a location by its id. On success response code will be `HTTP/1.1 204 No Content`.
+Delete a location by its id. On success, the response code will be `HTTP/1.1 204 No Content`.
 
 ## Other
 
